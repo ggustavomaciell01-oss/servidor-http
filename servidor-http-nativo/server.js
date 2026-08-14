@@ -22,6 +22,9 @@ const requisicao = (req, res) => {
     } else if (req.method === 'GET' && urlObj.pathname === '/produtos') {
         return res.end(JSON.stringify({"data" : [{"Frango" : "R$67,00", "Arroz" : "R$52,00", "Batata" : "R$34,00"}]}));
 
+    } else if (req.method === 'GET' && urlObj.pathname === '/status') {
+        return res.end(JSON.stringify({"data" : [{"Status" : "Ok"}]}));
+
     }
 
     
