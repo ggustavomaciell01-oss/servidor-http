@@ -25,6 +25,8 @@ const requisicao = (req, res) => {
     } else if (req.method === 'GET' && urlObj.pathname === '/status') {
         return res.end(JSON.stringify({"data" : [{"Status" : "Ok"}]}));
 
+    } else {
+        return res.end(JSON.stringify({"data" : "caminho não encontrado"}))
     }
 
     
